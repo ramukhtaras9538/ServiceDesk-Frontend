@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Service Desk",
+    "slug": "service-desk",
+    "description": "PSG campus service requests and support ticket tracking.",
+    "version": "1.0.0",
+    "scheme": "servicedesk",
+    "orientation": "portrait",
+    "icon": "./assets/images/service-desk-icon.png",
+    "primaryColor": "#2342C7",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/service-desk-adaptive-foreground.png",
+          "imageWidth": 180,
+          "resizeMode": "contain",
+          "backgroundColor": "#203876"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Service Desk to attach photos to your tickets.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "ios": {
+      "bundleIdentifier": "edu.psgtech.servicedesk",
+      "supportsTablet": true,
+      "buildNumber": "1"
+    },
+    "android": {
+      "package": "edu.psgtech.servicedesk",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/service-desk-adaptive-foreground.png",
+        "monochromeImage": "./assets/images/service-desk-monochrome.png",
+        "backgroundColor": "#2342C7"
+      }
+    },
+    "web": { "bundler": "metro" }
+  }
+}
